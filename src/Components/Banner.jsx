@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box,Image ,Badge,FormControl ,Input ,Button,Container,Heading,Grid,Text} from "@chakra-ui/react";
+import { Box,Image ,Badge,FormControl ,Input ,Button,Container,Heading,Grid,} from "@chakra-ui/react";
 import brandlogo from "../assets/brandlogo.png";
 import illustratious from "../assets/illustratious.png"
 import image1 from "../assets/images.png";

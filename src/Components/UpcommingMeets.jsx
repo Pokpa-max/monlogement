@@ -1,14 +1,15 @@
 
+
 import React from 'react'
 import { Box, Image, Container, Heading, Grid, Link } from '@chakra-ui/react';
-import upcommingone from '../assets/event1.png';
-import upcommingtwo from '../assets/event2.jpg';
+import  upcommingone from '../assets/event1.png';
+import upcommingtwo  from '../assets/event2.jpg';
 import upcommingthree from '../assets/event3.png';
 import upcommingfour from '../assets/event4.jpg';
 
 export default function upcommingMeets() {
   return (
-
+    <div>
        <Box mt={20}>
       <Container maxWidth="container.xl">
         <Box
@@ -16,8 +17,7 @@ export default function upcommingMeets() {
           display="flex"
           alignItems="center"
           justifyContent="space-between" >
-          <Box
-          >
+          <Box>
 
             <Heading alignItems="center" as="h3" size="lg">
               Upcoming online events
@@ -441,5 +441,6 @@ export default function upcommingMeets() {
         </Grid>
       </Container>
     </Box>
+    </div>
   );
 }

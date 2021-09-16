@@ -1,58 +1,47 @@
-
-
-import React from 'react'
 import { Box, Image, Container, Heading, Grid, Link } from '@chakra-ui/react';
-import  upcommingone from '../assets/event1.png';
-import upcommingtwo  from '../assets/event2.jpg';
-import upcommingthree from '../assets/event3.png';
-import upcommingfour from '../assets/event4.jpg';
+import Upcommingone from '../assets/upcomming-one.png';
+import Upcommingtwo from '../assets/upcomming-two.jpg';
+import Upcommingthree from '../assets/upcomming-three.jpg';
+import Upcommingfour from '../assets/upcomming-four.jpg';
 
-export default function upcommingMeets() {
+export default function UpcommingMeets() {
   return (
-    <div>
-       <Box mt={20}>
+    <Box mt={20}>
       <Container maxWidth="container.xl">
         <Box
           mb="7"
           display="flex"
           alignItems="center"
-          justifyContent="space-between" >
+          justifyContent="space-between"
+        >
           <Box>
-
             <Heading alignItems="center" as="h3" size="lg">
               Upcoming online events
             </Heading>
           </Box>
           <Box>
-
             <Link fontWeight="semibold" color="teal.500">
-               Explore more events
+              Explore more events
             </Link>
           </Box>
         </Box>
-      
-        <Grid templateColumns=
-        {
-          {
-            sm:'repeat(1, 1fr)',
-            md:'repeat(4,1fr)',
-            lg:'repeat(4,1fr)',
-            xl:'repeat(4,1fr)',
-            base:'repeat(1, 1fr)',
-
-          }
-        }
-         gap={6}
-         >
-
-
+        <Grid
+          templateColumns={{
+            sm: 'repeat(2, 1fr)',
+            md: 'repeat(2, 1fr)',
+            lg: 'repeat(4, 1fr)',
+            xl: 'repeat(4, 1fr)',
+            base: 'repeat(1, 1fr)',
+          }}
+          gap={6}
+        >
           {/* grid box */}
           <Box width="100%" align="left">
             <Box position="relative">
               <Image
                 position="relative"
                 w="100%"
-                src={upcommingone}
+                src={Upcommingone}
                 alt="brand"
               />
               <Box
@@ -151,7 +140,7 @@ export default function upcommingMeets() {
               <Image
                 position="relative"
                 w="100%"
-                src={upcommingtwo}
+                src={Upcommingtwo}
                 alt="brand"
               />
               <Box
@@ -249,7 +238,7 @@ export default function upcommingMeets() {
               <Image
                 position="relative"
                 w="100%"
-                src={upcommingthree}
+                src={Upcommingthree}
                 alt="brand"
               />
               <Box
@@ -347,7 +336,7 @@ export default function upcommingMeets() {
               <Image
                 position="relative"
                 w="100%"
-                src={upcommingfour}
+                src={Upcommingfour}
                 alt="brand"
               />
               <Box
@@ -441,6 +430,7 @@ export default function upcommingMeets() {
         </Grid>
       </Container>
     </Box>
-    </div>
   );
 }
+
+

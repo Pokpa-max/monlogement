@@ -1,21 +1,49 @@
+// import React from 'react';
+// import  {Box,Container, Heading,Grid,Button,Link,Image} from "@chakra-ui/react"
+// import joinGroup from '../assets/joingroup.png';
+// import ticket from '../assets/ticket.jpg';
+// import startGroup from '../assets/startgroup.jpg';
 import React from 'react';
-import  {Box,Container, Heading,Grid,Button,Link,Image} from "@chakra-ui/react"
-import joinGroup from '../assets/joingroup.png';
-import ticket from '../assets/ticket.jpg';
-import startGroup from '../assets/startgroup.jpg';
-export default function ItWorks() {
+import {
+  Box,
+  Image,
+  Button,
+  Container,
+  Heading,
+  Grid,
+  Link,
+} from '@chakra-ui/react';
+
+// import joinGroup from '../assets/joingroup.png';
+// import ticket from '../assets/ticket.jpg';
+// import startGroup from '../assets/startgroup.jpg';
+
+
+import joinGroup from '../assets/joinagroup.svg';
+import ticket from '../assets/ticket.svg';
+import startGroup from '../assets/start-group.svg';
+
+ export default function ItWorks() {
   return (
-    <div>
-      <Box>
-        <Container maxWidth="container.xl" my="20" >
-         <Heading align="center" as="h3" size="lg"pb="2" >
-           HOW Meetup works
-         </Heading>
-         <Box alignItems ="center" maxWidth="700px" mx="auto" pb="10">
-           Meet new people who share your interests throurgh onilne and in-person e
-           event .It's free to create an account.
-         </Box>
-         <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+    <Box>
+      <Container maxWidth="container.xl" my="20">
+        <Heading align="center" as="h3" size="lg" pb="2">
+          How Meetup works
+        </Heading>
+        <Box align="center" maxW="700px" mx="auto" pb="10">
+          Meet new people who share your interests through online and in-person
+          events. It’s free to create an account.
+        </Box>
+        <Grid
+          templateColumns={{
+            sm: 'repeat(1, 1fr)',
+            md: 'repeat(3, 1fr)',
+            lg: 'repeat(3, 1fr)',
+            xl: 'repeat(3, 1fr)',
+            base: 'repeat(1, 1fr)',
+          }}
+          gap={6}
+        >
           <Box mx="auto" align="center">
             <Image w="100%" boxSize="160px" src={joinGroup} alt="brand" />
             <Heading as="h5" size="md">
@@ -35,10 +63,9 @@ export default function ItWorks() {
             <Image w="100%" boxSize="160px" src={ticket} alt="brand" />
             <Heading as="h5" size="md">
               <Link>
-                {' '}
                 <Box color="blue.100" pb="4">
                   Join a Group
-                </Box>{' '}
+                </Box>
               </Link>
             </Heading>
             <p>
@@ -70,8 +97,8 @@ export default function ItWorks() {
             Join Meetup
           </Button>
         </Box>
-        </Container>
-      </Box>
-    </div>
-  )
+      </Container>
+    </Box>
+  );
 }
+

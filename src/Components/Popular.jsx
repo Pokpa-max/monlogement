@@ -7,9 +7,9 @@ import {
   Link,
   Divider,
 } from '@chakra-ui/react';
-import Popularimage from '../assets/popular.jpg';
+import Popularimage from '../assets/popular-image.jpg';
 
-export default function Popular() {
+ export default function Popular() {
   return (
     <Box mt={20}>
       <Container maxWidth="container.xl">
@@ -30,18 +30,16 @@ export default function Popular() {
             </Link>
           </Box>
         </Box>
-        <Grid  templateColumns={
-          {
-            sm:'repeat(1,1fr)',
-            md:'repeat(3,1fr)',
-            lg:'repeat(3,1fr)',
-            xl:'repeat(3,1fr)',
-            base:'repeat(1,1fr)',
-
-          }
-        }
-        gap={6}>
-        
+        <Grid
+          templateColumns={{
+            sm: 'repeat(1, 1fr)',
+            md: 'repeat(3, 1fr)',
+            lg: 'repeat(3, 1fr)',
+            xl: 'repeat(3, 1fr)',
+            base: 'repeat(1, 1fr)',
+          }}
+          gap={6}
+        >
           <Box
             border="1px"
             borderColor="gray.200"
@@ -161,5 +159,3 @@ export default function Popular() {
     </Box>
   );
 }
-
- 

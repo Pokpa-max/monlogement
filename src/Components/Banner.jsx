@@ -1,218 +1,281 @@
-import React from 'react';
-import { Box,Image ,Badge,FormControl ,Input ,Button,Container,Heading,Grid,} from "@chakra-ui/react";
-import brandlogo from "../assets/brandlogo.png";
-import illustratious from "../assets/illustratious.png"
-import image1 from "../assets/images.png";
-import image2 from "../assets/image2.gif";
-import image3 from "../assets/image2.jpg";
-import right from "../assets/right.png";
+
+import {
+  Box,
+  Image,
+  Button,
+  Container,
+  Heading,
+  Grid,
+  Badge,
+  FormControl,
+  Input,
+} from '@chakra-ui/react';
+import brandLogo from '../assets/brandlogo.png';
+import illustration from '../assets/online_events.svg';
+import imageOne from '../assets/one.jpg';
+import imageTwo from '../assets/two.jpg';
+import imageThree from '../assets/three.jpg';
+import rightArrow from '../assets/right-arrow.png';
 
 export default function Banner() {
   return (
-    <div>
-        <header>
-            <Box d="flex" alignItems="center" justifyContent="space-between" ml={6} mr={6}>
-            <Box><Image boxSize="90px" src={brandlogo} alt="brandlogo"/></Box>
-            <Box>
-            <Button pr={3} colorScheme="gray.600"fontWeight="sm" variant="link">
-               Log in
-             </Button>
-             <Button colorScheme="gray.600"fontWeight="sm" variant="link">
-               Sign up
-             </Button>
-             </Box>
+    <>
+      <header>
+        <Box
+          d="flex"
+          alignItems="center"
+          justifyContent="space-between"
+          ml={6}
+          mr={6}
+        >
+          <Box>
+            <Image boxSize="90px" src={brandLogo} alt="brand" />
+          </Box>
+          <Box>
+            <Button pr={3} colorScheme="gray.600" fontSize="sm" variant="link">
+              Log in
+            </Button>
+            <Button colorScheme="gray.600" fontSize="sm" variant="link">
+              Sign up
+            </Button>
+          </Box>
+        </Box>
+      </header>
+      <Box>
+        {/* main punch text */}
+        <Container maxW="container.xl">
+          <Box
+            d="flex"
+            alignItems="center"
+            py="20"
+            flexDirection={{
+              sm: 'column',
+              md: 'row',
+              lg: 'row',
+              xl: 'row',
+              base: 'column',
+            }}
+          >
+            <Box mr="6">
+              <Heading as="h1" size="2xl">
+                <Box fontWeight="black">
+                  Dive in! There are so many things to do on Meetup
+                </Box>
+              </Heading>
+              <Box mt="6" fontWeight="medium">
+                Join a group to meet people, make friends, find support, grow a
+                business, and explore your interests. Thousands of events are
+                happening every day, both online and in person!
+              </Box>
             </Box>
-            </header>
-
+            <Box w="100%">
+              <Image w="100%" src={illustration} alt="illustration" />
+            </Box>
+          </Box>
+        </Container>
+        {/* three boxes */}
+        <Container maxW="container.xl" mt={10}>
+          <Grid
+            templateColumns={{
+              sm: 'repeat(1, 1fr)',
+              md: 'repeat(3, 1fr)',
+              lg: 'repeat(3, 1fr)',
+              xl: 'repeat(3, 1fr)',
+              base: 'repeat(1, 1fr)',
+            }}
+            gap={6}
+          >
             <Box>
-                <Container maxWidth="container.xl">
-                <Box d="flex" alignItems="center" py="20"
-                 flexDirection={
-                     {
-                      sm:'column' ,
-                      md:'row',
-                      lg:'row',
-                      xl:'row',
-                      base:'column'
-
-                     }
-                 }
-                 >
-                    <Box mr="6">
-                        <Heading as="h1" size="2xl">
-                            <Box fontWeight="black" > 
-                             Drive ini There are so many thing to do in meetup
-                            </Box>
-                        </Heading>
-                        <Box mt="6" fontWeight="medium">
-                            join a group to meet people , make friends , find suppport 
-                            a business ,and explore  your interests ,Thoosands of events 
-                            are happening every day , both online and in person!
-                      </Box>
-                    </Box>
-                    <Box>
-                        <Image w="100" src={illustratious} alt="illustratious"/>
-                    </Box>
-                   </Box>
-                </Container>
-               </Box>
-               <Container maxW="container.xl" mt={10}>
-                 <Grid templateColumns ={
-                     {
-                         sm:'repeat(1,1fr)',
-                         md:'repeat(2,1fr)',
-                         lg:'repeat(2,1fr)',
-                         xl:'repeat(2,1fr)',
-                         base:'repeat(1,1fr)',
-
-
-                     }
-                 }>
-                     <Box>
-                         <Image w="100%" borderRadius="1px" src={image1} alt="image1"/>
-                         <Button colorScheme="teal" variant="link" mt="5">
-                             Explore the outdoors
-                             <Image  w="50%" ml="2" src={right} alt="image1"/>
-                         </Button>
-                     </Box>
-                     <Box>
-                         <Image w="100%" borderRadius="1px" src={image2} alt="image2"/>
-                         <Button colorScheme="teal" variant="link" mt="5">
-                             Explore the outdoors
-                             <Image  w="50%" ml="2" src={right} alt="image1"/>
-                         </Button>
-                     </Box>
-                     <Box>
-                         <Image w="100%" borderRadius="5px" src={image3} alt="image3"/>
-                         <Button colorScheme="teal" variant="link" mt="5">
-                             Explore the outdoors
-                             <Image w="50%" ml="2" src={right} alt="image1"/>
-                         </Button>
-                     </Box>
-                   </Grid>
-               </Container>
-               <Container maxW="container.xl">
-                   <Box 
-                     direction="row"
-                     display="flex"
-                     flexWrap="wrap"
-                     justifyContent ="space-between"
-                     my="10"
-                   >
-                       <Badge
-                       borderRadius="3xl"
-                       px={4}
-                       py={2}
-                       mr="4"
-                       textTransform="normal"
-                       color="#ffffff"
-                       bg="blue.100"
-
-                       >
-                       Boost your carrer
-                       </Badge>
-                       <Badge
-                       borderRadius="3xl"
-                       px={4}
-                       py={2}
-                       mr="4"
-                       textTransform="normal"
-                       color="#ffffff"
-                       bg="blue.100"
-
-                       >
-                       Sent your  zen
-                       </Badge>
-                       <Badge
-                       borderRadius="3xl"
-                       px={4}
-                       py={2}
-                       mr="4"
-                       textTransform="normal"
-                       color="#ffffff"
-                       bg="blue.100"
-
-                       >
-                       Get mooving 
-                       </Badge>
-                       <Badge
-                       borderRadius="3xl"
-                       px={4}
-                       py={2}
-                       mr="4"
-                       textTransform="normal"
-                       color="#ffffff"
-                       bg="blue.100"
-
-                       >
-                       Home your craft
-                       </Badge>
-                       <Badge
-                       borderRadius="3xl"
-                       px={4}
-                       py={2}
-                       mr="4"
-                       textTransform="normal"
-                       color="#ffffff"
-                       bg="blue.100"
-
-                       >
-                       Share language + Culture
-                       </Badge>
-                       <Badge
-                       borderRadius="3xl"
-                       px={4}
-                       py={2}
-                       mr="4"
-                       textTransform="normal"
-                       color="#ffffff"
-                       bg="blue.100"
-
-                       >
-                      Read with friends
-                       </Badge>
-                       <Badge
-                       borderRadius="3xl"
-                       px={4}
-                       py={2}
-                       mr="4"
-                       textTransform="normal"
-                       color="#ffffff"
-                       bg="blue.100"
-
-                       >
-                       Write together
-                       </Badge>
-                   </Box>
-                 </Container>
-
-                 {/* derniere partie du navbar */}
-
-    <Container maxW="container.xl" mt={20}>
-          <Grid      templateColumns = {
-              {
-                sm:'repeat(1,1fr)',
-                md:'repeat(2,1fr)',
-                lg:'repeat(2,1fr)',
-                xl:'repeat(2,1fr)',
-                base:'repeat(1,1fr)',
-
-              }
-          } gap={6}>
+              <Image
+                w="100%"
+                borderRadius="lg"
+                src={imageOne}
+                alt="image three"
+              />
+              <Button colorScheme="teal" variant="link" mt="5">
+                Make new friend
+                <Image w="100%" ml="2" src={rightArrow} alt="right arrow" />
+              </Button>
+            </Box>
+            <Box>
+              <Image
+                w="100%"
+                borderRadius="lg"
+                src={imageTwo}
+                alt="image three"
+              />
+              <Button colorScheme="teal" variant="link" mt="5">
+                Explore the outdoors
+                <Image w="100%" ml="2" src={rightArrow} alt="right arrow" />
+              </Button>
+            </Box>
+            <Box>
+              <Image
+                w="100%"
+                borderRadius="lg"
+                src={imageThree}
+                alt="image three"
+              />
+              <Button colorScheme="teal" variant="link" mt="5">
+                Connect over tech
+                <Image w="100%" ml="2" src={rightArrow} alt="right arrow" />
+              </Button>
+            </Box>
+          </Grid>
+        </Container>
+        {/* pills */}
+        <Container maxW="container.xl">
+          <Box
+            direction="row"
+            display="flex"
+            flexWrap="wrap"
+            justifyContent={{
+              sm: 'flex-start',
+              md: 'space-between',
+              lg: 'space-between',
+              xl: 'space-between',
+              base: 'flex-start',
+            }}
+            my="10"
+          >
+            <Badge
+              borderRadius="3xl"
+              px={4}
+              py={2}
+              mr="4"
+              mb="4"
+              textTransform="normal"
+              color="#ffffff"
+              bg="blue.100"
+            >
+              Boost your carrer
+            </Badge>
+            <Badge
+              borderRadius="3xl"
+              px={4}
+              py={2}
+              mr="4"
+              mb="4"
+              color="#ffffff"
+              textTransform="normal"
+              bg="blue.100"
+            >
+              Find your zen
+            </Badge>
+            <Badge
+              borderRadius="3xl"
+              px={4}
+              py={2}
+              mr="4"
+              mb="4"
+              color="#ffffff"
+              textTransform="normal"
+              bg="blue.100"
+            >
+              Get moving
+            </Badge>
+            <Badge
+              borderRadius="3xl"
+              px={4}
+              py={2}
+              mr="4"
+              mb="4"
+              color="#ffffff"
+              textTransform="normal"
+              bg="blue.100"
+            >
+              Share launguage + culture
+            </Badge>
+            <Badge
+              borderRadius="3xl"
+              px={4}
+              py={2}
+              mr="4"
+              mb="4"
+              color="#ffffff"
+              textTransform="normal"
+              bg="blue.100"
+            >
+              Read with friends
+            </Badge>
+            <Badge
+              borderRadius="3xl"
+              px={4}
+              py={2}
+              mr="4"
+              mb="4"
+              color="#ffffff"
+              textTransform="normal"
+              bg="blue.100"
+            >
+              Write together
+            </Badge>
+            <Badge
+              borderRadius="3xl"
+              px={4}
+              py={2}
+              mr="4"
+              mb="4"
+              color="#ffffff"
+              textTransform="normal"
+              bg="blue.100"
+            >
+              Hone your craft
+            </Badge>
+          </Box>
+        </Container>
+        {/* last header section */}
+        <Container maxW="container.xl" mt={20}>
+          <Grid
+            templateColumns={{
+              sm: 'repeat(1, 1fr)',
+              md: 'repeat(2, 1fr)',
+              lg: 'repeat(2, 1fr)',
+              xl: 'repeat(2, 1fr)',
+              base: 'repeat(1, 1fr)',
+            }}
+            gap={6}
+          >
             <Box>
               <Heading as="h3" size="lg" mb="7">
-                Quest ce que tu veut faire ?
+                What do you want to do?
               </Heading>
-              <Box d="flex" alignItems="center"
-                
+              <Box
+                d="flex"
+                alignItems="center"
+                flexDirection={{
+                  sm: 'column',
+                  md: 'row',
+                  lg: 'row',
+                  xl: 'row',
+                  base: 'column',
+                }}
+                w="100%"
               >
-                <Box flexBasis={'50%'} mr="2">
+                <Box
+                  flexBasis={{
+                    sm: '100%',
+                    md: '50%',
+                    lg: '50%',
+                    xl: '50%',
+                    base: '100%',
+                  }}
+                  w="100%"
+                  mr={{
+                    sm: '0',
+                    md: '2',
+                    lg: '2',
+                    xl: '2',
+                    base: '0',
+                  }}
+                >
                   <FormControl id="email">
                     <Box pos="relative">
                       <Input
                         pl={'8'}
                         placeholder="Search for 'tennis'"
                         type="text"
+                        w="100%"
                       />
                       <Box pos="absolute" top="3" left="2">
                         <svg
@@ -220,7 +283,7 @@ export default function Banner() {
                           width="18"
                           height="18"
                           viewBox="0 0 20 20"
-                          fill="#d9d9d9"
+                          fill="#c0c0c0"
                         >
                           <path
                             fillRule="evenodd"
@@ -232,13 +295,30 @@ export default function Banner() {
                     </Box>
                   </FormControl>
                 </Box>
-                <Box flexBasis="50%" ml="2">
+                <Box
+                  flexBasis={{
+                    sm: '100%',
+                    md: '50%',
+                    lg: '50%',
+                    xl: '50%',
+                    base: '100%',
+                  }}
+                  w="100%"
+                  ml={{
+                    sm: '0',
+                    md: '2',
+                    lg: '2',
+                    xl: '2',
+                    base: '0',
+                  }}
+                >
                   <FormControl id="email">
                     <Box pos="relative">
                       <Input
                         pl={'8'}
                         placeholder="Search for 'tennis'"
                         type="text"
+                        w="100%"
                       />
                       <Box pos="absolute" top="3" left="2">
                         <svg
@@ -246,7 +326,7 @@ export default function Banner() {
                           width="18"
                           height="18"
                           viewBox="0 0 20 20"
-                          fill="#d9d9d9"
+                          fill="#c0c0c0"
                         >
                           <path
                             fillRule="evenodd"
@@ -273,7 +353,18 @@ export default function Banner() {
               </Button>
             </Box>
             <Box>
-              <Heading as="h3" size="lg" mb="7">
+              <Heading
+                as="h3"
+                size="lg"
+                mb="7"
+                display={{
+                  sm: 'none',
+                  md: 'block',
+                  lg: 'block',
+                  xl: 'block',
+                  base: 'none',
+                }}
+              >
                 See what’s happening
               </Heading>
               <Box display="flex" flexWrap="wrap" justifyContent="flex-start">
@@ -365,6 +456,8 @@ export default function Banner() {
             </Box>
           </Grid>
         </Container>
-          </div>
-  )
+      </Box>
+    </>
+  );
 }
+

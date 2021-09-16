@@ -9,11 +9,12 @@ import Popular from './Components/Popular';
 import Stories from './Components/Stories';
 import UpcommingMeets from './Components/UpcommingMeets';
 
-import imageBg from './assets/bg.png';
+import imageBg from './assets/bg.svg';
+
 
 function App() {
   return (
-    <div>
+    <div>   
       <Box position="absolute" left="0" top="0" right="0">
         <Banner />
         <ItWorks />

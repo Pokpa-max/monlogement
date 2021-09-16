@@ -1,9 +1,9 @@
 import { Box, Image, Container, Heading, Grid, Link } from '@chakra-ui/react';
-import Storyone from '../assets/images.png';
-import Storytwo from '../assets/event2.jpg';
-import Storythree from '../assets/event4.jpg';
+import Storyone from '../assets/story-one.jpg';
+import Storytwo from '../assets/story-two.jpg';
+import Storythree from '../assets/story-three.jpg';
 
-export default  function Stories() {
+export default function Stories() {
   return (
     <Box mt={10}>
       <Container maxWidth="container.xl">
@@ -23,7 +23,18 @@ export default  function Stories() {
             </Box>
           </Box>
         </Box>
-        <Grid mt="10" mb="40" templateColumns="repeat(3, 1fr)" gap={6}>
+        <Grid
+          mt="10"
+          mb="40"
+          templateColumns={{
+            sm: 'repeat(2, 1fr)',
+            md: 'repeat(3, 1fr)',
+            lg: 'repeat(3, 1fr)',
+            xl: 'repeat(3, 1fr)',
+            base: 'repeat(1, 1fr)',
+          }}
+          gap={6}
+        >
           <Box width="100%" align="left">
             <Link>
               <Image
@@ -123,5 +134,3 @@ export default  function Stories() {
     </Box>
   );
 }
-
-

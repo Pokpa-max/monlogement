@@ -1,23 +1,31 @@
 import { Box, Image, Container, Heading } from '@chakra-ui/react';
-import deviceLeft from '../assets/android.jpg';
-import meetupLogo from '../assets/brandlogo.png';
-import deviceRight from '../assets/iphone.jpg';
+import deviceLeft from '../assets/device-left.webp';
+import meetupLogo from '../assets/meetup-logo.svg';
+import deviceRight from '../assets/device-right.webp';
 
-import androidAppstore from '../assets/app-store.jpg';
-import iosAppstore from '../assets/google_play.png';
+import androidAppstore from '../assets/android-app-download.svg';
+import iosAppstore from '../assets/ios-app-download.svg';
 
 export default function Connected() {
   return (
-    <Box my="20">
+    <Box >
+      <Box my="20">
       <Container maxWidth="container.xl">
         <Box
           display="flex"
           pos="relative"
           justify-content="space-between"
           alignItems="center"
-        
         >
-          <Box>
+          <Box
+            display={{
+              sm: 'none',
+              md: 'block',
+              lg: 'block',
+              xl: 'block',
+              base: 'none',
+            }}
+          >
             <Image w="260px" src={deviceLeft}></Image>
           </Box>
           <Box pos="relative" mx="auto" align="center">
@@ -25,25 +33,25 @@ export default function Connected() {
             <Heading as="h6" size="md" my="7">
               Stay connected. <br /> Download the app.
             </Heading>
-            <Box d="flex"
-              flexWrap={{
-                sm:'wrap',
-                md:'nowrap',
-                lg:'nowrap',
-                xl:'nowrap',
-                base:'wrap'
-              }} 
-            >
+            <Box d="flex">
               <Image w="180px" p="5" src={androidAppstore}></Image>
-              <Image w="180px" h="85" p="5" src={iosAppstore} mt="5"></Image>
+              <Image w="180px" p="5" src={iosAppstore}></Image>
             </Box>
           </Box>
-          <Box>
+          <Box
+            display={{
+              sm: 'none',
+              md: 'block',
+              lg: 'block',
+              xl: 'block',
+              base: 'none',
+            }}
+          >
             <Image w="260px" right="0" src={deviceRight}></Image>
           </Box>
         </Box>
       </Container>
     </Box>
+    </Box>
   );
 }
-

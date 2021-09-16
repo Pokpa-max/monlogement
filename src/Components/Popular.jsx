@@ -159,3 +159,4 @@ import Popularimage from '../assets/popular-image.jpg';
     </Box>
   );
 }
+

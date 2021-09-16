@@ -1,8 +1,4 @@
-// import React from 'react';
-// import  {Box,Container, Heading,Grid,Button,Link,Image} from "@chakra-ui/react"
-// import joinGroup from '../assets/joingroup.png';
-// import ticket from '../assets/ticket.jpg';
-// import startGroup from '../assets/startgroup.jpg';
+
 import React from 'react';
 import {
   Box,
@@ -13,12 +9,6 @@ import {
   Grid,
   Link,
 } from '@chakra-ui/react';
-
-// import joinGroup from '../assets/joingroup.png';
-// import ticket from '../assets/ticket.jpg';
-// import startGroup from '../assets/startgroup.jpg';
-
-
 import joinGroup from '../assets/joinagroup.svg';
 import ticket from '../assets/ticket.svg';
 import startGroup from '../assets/start-group.svg';
@@ -101,4 +91,5 @@ import startGroup from '../assets/start-group.svg';
     </Box>
   );
 }
+
 

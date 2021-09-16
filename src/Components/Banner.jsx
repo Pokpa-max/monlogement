@@ -15,7 +15,7 @@ import illustration from '../assets/online_events.svg';
 import imageOne from '../assets/one.jpg';
 import imageTwo from '../assets/two.jpg';
 import imageThree from '../assets/three.jpg';
-import rightArrow from '../assets/right-arrow.png';
+import rightArrow from '../assets/right-arrow1.png';
 
 export default function Banner() {
   return (

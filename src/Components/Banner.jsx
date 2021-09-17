@@ -242,6 +242,7 @@ export default function Banner() {
                 What do you want to do?
               </Heading>
               <Box
+             
                 d="flex"
                 alignItems="center"
                 flexDirection={{
@@ -254,6 +255,13 @@ export default function Banner() {
                 w="100%"
               >
                 <Box
+                 mb={{
+                  sm: '2',
+                  md: 'row',
+                  lg: 'row',
+                  xl: 'row',
+                  base: '2',
+                 }}
                   flexBasis={{
                     sm: '100%',
                     md: '50%',
@@ -296,8 +304,8 @@ export default function Banner() {
                     </Box>
                   </FormControl>
                 </Box>
-                <Spacer/>
                 <Box
+                  
                   flexBasis={{
                     sm: '100%',
                     md: '50%',

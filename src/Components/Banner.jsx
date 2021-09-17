@@ -9,7 +9,6 @@ import {
   Badge,
   FormControl,
   Input,
-  Spacer,
 } from '@chakra-ui/react';
 import brandLogo from '../assets/brandlogo.png';
 import illustration from '../assets/online_events.svg';

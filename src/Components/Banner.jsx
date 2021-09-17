@@ -242,6 +242,7 @@ export default function Banner() {
               </Heading>
               <Box
                 d="flex"
+                gap={5}
                 alignItems="center"
                 flexDirection={{
                   sm: 'column',

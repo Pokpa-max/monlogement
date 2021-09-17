@@ -9,6 +9,7 @@ import {
   Badge,
   FormControl,
   Input,
+  Spacer,
 } from '@chakra-ui/react';
 import brandLogo from '../assets/brandlogo.png';
 import illustration from '../assets/online_events.svg';
@@ -242,7 +243,6 @@ export default function Banner() {
               </Heading>
               <Box
                 d="flex"
-                 justifyContent="space-between"
                 alignItems="center"
                 flexDirection={{
                   sm: 'column',
@@ -296,6 +296,7 @@ export default function Banner() {
                     </Box>
                   </FormControl>
                 </Box>
+                <Spacer/>
                 <Box
                   flexBasis={{
                     sm: '100%',
